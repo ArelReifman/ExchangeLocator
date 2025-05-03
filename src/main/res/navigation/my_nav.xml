@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/coinRecyclerViewFragment">
+
+
+    <fragment
+        android:id="@+id/addCoinFragment"
+        android:name="com.example.exchangelocator.ui.Add_Coin.AddCoinFragment"
+        android:label="add_coin"
+        tools:layout="@layout/add_coin" >
+        <action
+            android:id="@+id/action_addCoinFragment_to_coinRecyclerViewFragment"
+            app:destination="@id/coinRecyclerViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coinRecyclerViewFragment"
+        android:name="com.example.exchangelocator.ui.All_Coins.CoinRecyclerViewFragment"
+        android:label="recycler_view_coin"
+        tools:layout="@layout/recycler_view_coin" >
+        <action
+            android:id="@+id/action_coinRecyclerViewFragment_to_addCoinFragment"
+            app:destination="@id/addCoinFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">ExchangeLocator</string>
+    <string name="map_image">map image</string>
+    <string name="add_new_exchange_shop">Add new exchange shop</string>
+    <string name="type_of_coin">type_of_coin</string>
+    <string name="acronym_of_the_coin">acronym_of_the_coin</string>
+    <string name="the_convert">the_convert</string>
+    <string name="convert">Convert</string>
+    <string name="enter_your_coin">enter your coin</string>
+    <string name="your_destination">Your destination</string>
+    <string name="you_see_the_image_of_the_country">you see the image of the country</string>
+    <string name="currency_symbol">currency_symbol</string>
+    <string name="add_button">add_button</string>
+    <string name="after_convert">after convert</string>
+    <string name="symbol">symbol</string>
+    <string name="before_convert">before convert</string>
+    <string name="result">result</string>
+    <string name="save">Save</string>
+    <string name="select_currency">Select your currency type</string>
+    <string name="enter_currency">Enter your currency</string>
+    <string name="select_converted_currency">Select converted currency type</string>
+    <string name="converted_currency">Your converted currency</string>
+    <string name="swap_description">Swap currencies</string>
+    <string name="converted_output_label">Your converted currency</string>
+
+    <string name="output_label">Select converted currency type</string>
+    <string name="user_amount">Enter your currency</string>
+    <string name="user_input_amount">user input amount</string>
+
+</resources>

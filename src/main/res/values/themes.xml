@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.ExchangeLocator" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+
+        <item name="colorOnSecondary">@color/white</item>
+
+
+        <item name="colorOnBackground">@color/black</item>
+
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/black</item>
+
+        <item name="colorOutline">@color/grey</item>
+    </style>
+
+    <style name="Theme.ExchangeLocator" parent="Base.Theme.ExchangeLocator" />
+
+</resources>
