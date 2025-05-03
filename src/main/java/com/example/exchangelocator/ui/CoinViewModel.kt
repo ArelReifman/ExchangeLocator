@@ -16,4 +16,4 @@ class CoinViewModel(application: Application) : AndroidViewModel(application) {
     fun deleteCoin(coin: CoinDetail) {
         repository.deleteCoin(coin)
     }
-}//test1
+}

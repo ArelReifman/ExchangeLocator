@@ -2,6 +2,7 @@ package com.example.exchangelocator.Data.models.repository
 
 import android.app.Application
 import com.example.exchangelocator.Data.models.CoinDetail
+import com.example.exchangelocator.Data.models.ExchangePoint
 import com.example.exchangelocator.Data.models.Local_DB.CoinDB
 import com.example.exchangelocator.Data.models.Local_DB.CoinDao
 

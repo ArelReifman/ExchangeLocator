@@ -13,9 +13,12 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.exchangelocator.Data.models.CoinDetail
+import com.example.exchangelocator.Data.models.ExchangePoint
+import com.example.exchangelocator.Data.models.ExchangePointProvider
 import com.example.exchangelocator.R
 import com.example.exchangelocator.ui.CoinViewModel
 import com.example.exchangelocator.databinding.RecyclerViewCoinBinding
+import com.example.exchangelocator.ui.Single_Coin.ExchangeDetailsDialog
 
 class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener {
 
@@ -90,8 +93,47 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
 
 
     override fun onCoinClick(coin: CoinDetail, position: Int) {
-        viewModel.deleteCoin(coin)
-        Toast.makeText(requireContext(), "Deleted!", Toast.LENGTH_SHORT).show()
+        val dialog = AlertDialog.Builder(requireContext())
+            .setTitle("Exchange Location")
+            .setMessage("Do you want to open ${coin.toCurrency} exchange places in your area?")
+            .setPositiveButton("Open") { _, _ ->
+
+                showExchangePointsList(coin.toCurrency)
+            }
+            .setNegativeButton("Close") { dialogInterface, _ ->
+                coinAdapter.notifyItemChanged(position)
+                Toast.makeText(requireContext(), "Your action was canceled", Toast.LENGTH_SHORT).show()
+                dialogInterface.dismiss()
+            }
+            .setCancelable(false)
+            .create()
+
+        dialog.show()
+
+    }
+
+
+    private fun showExchangePointsList(currencyCode: String) {
+        val exchangePoints = ExchangePointProvider.getExchangePointsByCurrency(currencyCode)
+
+        if (exchangePoints.isNotEmpty()) {
+            val exchangeNames = exchangePoints.map { it.name }.toTypedArray()
+
+            AlertDialog.Builder(requireContext())
+                .setTitle("Exchange Points for $currencyCode")
+                .setItems(exchangeNames) { _, position ->
+                    showExchangePointDetails(exchangePoints[position])
+                }
+                .setNegativeButton("Close", null)
+                .show()
+        } else {
+            Toast.makeText(context, "No exchange points available for this currency", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun showExchangePointDetails(exchangePoint: ExchangePoint) {
+        val dialog = ExchangeDetailsDialog(requireContext(), exchangePoint)
+        dialog.show()
     }
 
     override fun onDestroyView() {
