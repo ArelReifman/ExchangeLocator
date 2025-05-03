@@ -5,6 +5,8 @@ import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Window
+import android.view.WindowManager
+import android.widget.ImageView
 import com.example.exchangelocator.Data.models.ExchangePoint
 import com.example.exchangelocator.databinding.DialogLayoutBinding
 
@@ -23,12 +25,27 @@ class ExchangeDetailsDialog(
         setContentView(binding.root)
 
 
-        binding.tvExchangeName.text = exchangePoint.name
+        val width = (context.resources.displayMetrics.widthPixels * 0.90).toInt()
+        window?.setLayout(width, WindowManager.LayoutParams.WRAP_CONTENT)
+
+
+        window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+
+        setCancelable(false)
+
+
+        binding.tvExchangeName.text = "EXCHANGE"
+
+
         binding.ivExchangeImage.setImageResource(exchangePoint.imageResId)
-        binding.tvCountry.text = exchangePoint.country
-        binding.tvCity.text = exchangePoint.city
-        binding.tvStreet.text = exchangePoint.street
-        binding.tvOpeningHours.text = exchangePoint.openingHours
+        binding.ivExchangeImage.scaleType = ImageView.ScaleType.CENTER_CROP
+
+
+        binding.valueCountry.text = exchangePoint.country
+        binding.valueCity.text = exchangePoint.city
+        binding.valueAddress.text = exchangePoint.street
+        binding.valueHours.text = exchangePoint.openingHours
 
 
         binding.btnClose.setOnClickListener {

@@ -37,19 +37,16 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         coinAdapter = CoinAdapter()
         coinAdapter.setOnCoinItemClickListener(this)
         binding.recyclerViewLayout.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerViewLayout.adapter = coinAdapter
-
 
         viewModel.coin?.observe(viewLifecycleOwner) { coinsList ->
             if (coinsList != null) {
                 coinAdapter.updateList(coinsList)
             }
         }
-
 
         val swipeCallback = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
             override fun onMove(
@@ -59,11 +56,10 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val position = viewHolder.adapterPosition
 
-
                 if (position != RecyclerView.NO_POSITION && position < coinAdapter.itemCount) {
                     val coin = coinAdapter.getCoinAtPosition(position)
 
-                    val dialog = AlertDialog.Builder(requireContext())
+                    val dialogBuilder = AlertDialog.Builder(requireContext(), R.style.CustomAlertDialog)
                         .setTitle("Delete Coin")
                         .setMessage("Are you sure you want to delete ${coin.toCurrency}?")
                         .setPositiveButton("Yes") { _, _ ->
@@ -76,28 +72,25 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
                             dialogInterface.dismiss()
                         }
                         .setCancelable(false)
-                        .create()
 
-                    dialog.show()
+                    val alertDialog = dialogBuilder.create()
+                    alertDialog.show()
                 }
             }
         }
 
         ItemTouchHelper(swipeCallback).attachToRecyclerView(binding.recyclerViewLayout)
 
-
         binding.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_coinRecyclerViewFragment_to_addCoinFragment)
         }
     }
 
-
     override fun onCoinClick(coin: CoinDetail, position: Int) {
-        val dialog = AlertDialog.Builder(requireContext())
+        val dialogBuilder = AlertDialog.Builder(requireContext(), R.style.CustomAlertDialog)
             .setTitle("Exchange Location")
             .setMessage("Do you want to open ${coin.toCurrency} exchange places in your area?")
             .setPositiveButton("Open") { _, _ ->
-
                 showExchangePointsList(coin.toCurrency)
             }
             .setNegativeButton("Close") { dialogInterface, _ ->
@@ -106,12 +99,10 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
                 dialogInterface.dismiss()
             }
             .setCancelable(false)
-            .create()
 
-        dialog.show()
-
+        val alertDialog = dialogBuilder.create()
+        alertDialog.show()
     }
-
 
     private fun showExchangePointsList(currencyCode: String) {
         val exchangePoints = ExchangePointProvider.getExchangePointsByCurrency(currencyCode)
@@ -119,13 +110,15 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
         if (exchangePoints.isNotEmpty()) {
             val exchangeNames = exchangePoints.map { it.name }.toTypedArray()
 
-            AlertDialog.Builder(requireContext())
+            val dialogBuilder = AlertDialog.Builder(requireContext(), R.style.CustomAlertDialog)
                 .setTitle("Exchange Points for $currencyCode")
                 .setItems(exchangeNames) { _, position ->
                     showExchangePointDetails(exchangePoints[position])
                 }
                 .setNegativeButton("Close", null)
-                .show()
+
+            val alertDialog = dialogBuilder.create()
+            alertDialog.show()
         } else {
             Toast.makeText(context, "No exchange points available for this currency", Toast.LENGTH_SHORT).show()
         }
@@ -141,5 +134,3 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
         _binding = null
     }
 }
-
-
