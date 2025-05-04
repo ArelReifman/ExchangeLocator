@@ -8,6 +8,7 @@ import android.view.Window
 import android.view.WindowManager
 import android.widget.ImageView
 import com.example.exchangelocator.Data.models.ExchangePoint
+import com.example.exchangelocator.R
 import com.example.exchangelocator.databinding.DialogLayoutBinding
 
 class ExchangeDetailsDialog(
@@ -35,7 +36,7 @@ class ExchangeDetailsDialog(
         setCancelable(false)
 
 
-        binding.tvExchangeName.text = "EXCHANGE"
+        binding.tvExchangeName.text = context.getString(R.string.exchange)
 
 
         binding.ivExchangeImage.setImageResource(exchangePoint.imageResId)

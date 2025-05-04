@@ -1,5 +1,7 @@
 package com.example.exchangelocator.ui.Add_Coin
-
+import android.view.Gravity
+import androidx.core.content.ContextCompat
+import io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -63,7 +65,7 @@ class AddCoinFragment : Fragment() {
 
                 binding.outputConvert.text = String.format("%.2f", converted)
             } else {
-                binding.outputConvert.text = "Invalid input"
+                binding.outputConvert.text = getString(R.string.invalid_input)
             }
         }
 
@@ -80,10 +82,10 @@ class AddCoinFragment : Fragment() {
 
                 viewModel.addCoin(newCoin)
 
-                Toast.makeText(requireContext(), "Coin saved successfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.coin_saved_successfully), Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_addCoinFragment_to_coinRecyclerViewFragment)
             } else {
-                Toast.makeText(requireContext(), "Please convert before saving", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.please_convert_before_saving), Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -93,10 +95,33 @@ class AddCoinFragment : Fragment() {
             binding.spinnerUserCoin.setSelection(toPosition)
             binding.spinnerDestinationCoin.setSelection(fromPosition)
         }
+
+        binding.helpIcon.setOnClickListener {
+            showTooltip(it)
+        }
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun showTooltip(anchorView: View) {
+
+        val tooltipBuilder = SimpleTooltip.Builder(requireContext())
+        tooltipBuilder.anchorView(anchorView)
+        tooltipBuilder.text(getString(R.string.tooltip_help_message))
+        tooltipBuilder.gravity(Gravity.START)
+        val textColor = ContextCompat.getColor(requireContext(), R.color.white)
+        val bgColor = ContextCompat.getColor(requireContext(), R.color.converter_card_outer)
+        tooltipBuilder.textColor(textColor)
+        tooltipBuilder.backgroundColor(bgColor)
+        tooltipBuilder.arrowColor(bgColor)
+        tooltipBuilder.animated(true)
+        tooltipBuilder.transparentOverlay(false)
+        val tooltip = tooltipBuilder.build()
+        tooltip.show()
     }
 }

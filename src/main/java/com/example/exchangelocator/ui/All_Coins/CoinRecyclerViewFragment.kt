@@ -60,15 +60,15 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
                     val coin = coinAdapter.getCoinAtPosition(position)
 
                     val dialogBuilder = AlertDialog.Builder(requireContext(), R.style.CustomAlertDialog)
-                        .setTitle("Delete Coin")
-                        .setMessage("Are you sure you want to delete ${coin.toCurrency}?")
-                        .setPositiveButton("Yes") { _, _ ->
+                        .setTitle(getString(R.string.delete_coin))
+                        .setMessage(getString(R.string.are_you_sure_delete, coin.toCurrency))
+                        .setPositiveButton(getString(R.string.yes)) { _, _ ->
                             viewModel.deleteCoin(coin)
-                            Toast.makeText(requireContext(), "Deleted!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(requireContext(), getString(R.string.deleted), Toast.LENGTH_SHORT).show()
                         }
-                        .setNegativeButton("No") { dialogInterface, _ ->
+                        .setNegativeButton(getString(R.string.no)) { dialogInterface, _ ->
                             coinAdapter.notifyItemChanged(position)
-                            Toast.makeText(requireContext(), "Your action was canceled", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(requireContext(), getString(R.string.action_canceled), Toast.LENGTH_SHORT).show()
                             dialogInterface.dismiss()
                         }
                         .setCancelable(false)
@@ -88,14 +88,14 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
 
     override fun onCoinClick(coin: CoinDetail, position: Int) {
         val dialogBuilder = AlertDialog.Builder(requireContext(), R.style.CustomAlertDialog)
-            .setTitle("Exchange Location")
-            .setMessage("Do you want to open ${coin.toCurrency} exchange places in your area?")
-            .setPositiveButton("Open") { _, _ ->
+            .setTitle(getString(R.string.exchange_location))
+            .setMessage(getString(R.string.do_you_want_to_open, coin.toCurrency))
+            .setPositiveButton(getString(R.string.open)) { _, _ ->
                 showExchangePointsList(coin.toCurrency)
             }
-            .setNegativeButton("Close") { dialogInterface, _ ->
+            .setNegativeButton(getString(R.string.close)) { dialogInterface, _ ->
                 coinAdapter.notifyItemChanged(position)
-                Toast.makeText(requireContext(), "Your action was canceled", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.action_canceled), Toast.LENGTH_SHORT).show()
                 dialogInterface.dismiss()
             }
             .setCancelable(false)
@@ -105,22 +105,22 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
     }
 
     private fun showExchangePointsList(currencyCode: String) {
-        val exchangePoints = ExchangePointProvider.getExchangePointsByCurrency(currencyCode)
+        val exchangePoints = ExchangePointProvider.getExchangePointsByCurrency(requireContext(), currencyCode)
 
         if (exchangePoints.isNotEmpty()) {
             val exchangeNames = exchangePoints.map { it.name }.toTypedArray()
 
             val dialogBuilder = AlertDialog.Builder(requireContext(), R.style.CustomAlertDialog)
-                .setTitle("Exchange Points for $currencyCode")
+                .setTitle(getString(R.string.exchange_points_for, currencyCode))
                 .setItems(exchangeNames) { _, position ->
                     showExchangePointDetails(exchangePoints[position])
                 }
-                .setNegativeButton("Close", null)
+                .setNegativeButton(getString(R.string.close), null)
 
             val alertDialog = dialogBuilder.create()
             alertDialog.show()
         } else {
-            Toast.makeText(context, "No exchange points available for this currency", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, getString(R.string.no_exchange_points), Toast.LENGTH_SHORT).show()
         }
     }
 

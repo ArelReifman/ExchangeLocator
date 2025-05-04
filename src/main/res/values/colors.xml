@@ -27,4 +27,5 @@
     <color name="converter_button_convert">#1E4976</color>
     <color name="converter_button_save">#1A3A67</color>
     <color name="converter_icon_background">#475569</color>
+    <color name="arrow_color">#320E42</color>
 </resources>

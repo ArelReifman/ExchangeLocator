@@ -6,7 +6,7 @@
     <string name="enter_currency">Enter your currency</string>
     <string name="select_converted_currency">Select converted currency type</string>
     <string name="converted_currency">Your converted currency</string>
-    <string name="user_input_amount">Amount</string>
+    <string name="user_input_amount">Type</string>
     <string name="convert">Convert</string>
     <string name="save">Save</string>
     <string name="swap_description">Swap currencies</string>
@@ -21,4 +21,19 @@
     <string name="country">Country:</string>
     <string name="exchange">EXCHANGE</string>
     <string name="add_button">Add</string>
+    <string name="tooltip_help_message">Enter the amount you want to convert</string>
+    <string name="exchange_location">Exchange Location</string>
+    <string name="do_you_want_to_open">Do you want to open %s exchange places in your area?</string>
+    <string name="open">Open</string>
+    <string name="delete_coin">Delete Coin</string>
+    <string name="are_you_sure_delete">Are you sure you want to delete %s?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="deleted">Deleted!</string>
+    <string name="action_canceled">Your action was canceled</string>
+    <string name="exchange_points_for">Exchange Points for %s</string>
+    <string name="no_exchange_points">No exchange points available for this currency</string>
+    <string name="invalid_input">Invalid input</string>
+    <string name="coin_saved_successfully">Coin saved successfully</string>
+    <string name="please_convert_before_saving">Please convert before saving</string>
 </resources>

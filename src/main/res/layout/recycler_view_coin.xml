@@ -6,7 +6,7 @@
     android:id="@+id/coin_recycler_view_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/world_image"
+    android:background="@drawable/bg_globe_centered"
     tools:context=".ui.All_Coins.CoinRecyclerViewFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -14,7 +14,7 @@
         style="@style/Widget.MaterialComponents.Toolbar.Primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="?attr/colorPrimary"
+        android:backgroundTint="@color/arrow_color"
         app:title="ExchangeLocator"
         app:titleCentered="true"
         app:titleTextColor="@android:color/white"
@@ -37,8 +37,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/add_button"
-        android:src="@drawable/outline_arrow_right_24"
-        app:backgroundTint="@color/kind_of_grey"
+        android:src="@drawable/baseline_arrow_forward_24"
+        app:tint="@android:color/white"
+        app:backgroundTint="@color/arrow_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
          />
