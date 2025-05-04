@@ -5,7 +5,6 @@
     android:id="@+id/my_nav"
     app:startDestination="@id/coinRecyclerViewFragment">
 
-
     <fragment
         android:id="@+id/addCoinFragment"
         android:name="com.example.exchangelocator.ui.Add_Coin.AddCoinFragment"
@@ -13,7 +12,11 @@
         tools:layout="@layout/add_coin" >
         <action
             android:id="@+id/action_addCoinFragment_to_coinRecyclerViewFragment"
-            app:destination="@id/coinRecyclerViewFragment" />
+            app:destination="@id/coinRecyclerViewFragment"
+            app:enterAnim="@anim/dialog_enter"
+            app:exitAnim="@anim/dialog_exit"
+            app:popEnterAnim="@anim/dialog_enter"
+            app:popExitAnim="@anim/dialog_exit" />
     </fragment>
     <fragment
         android:id="@+id/coinRecyclerViewFragment"
@@ -22,6 +25,10 @@
         tools:layout="@layout/recycler_view_coin" >
         <action
             android:id="@+id/action_coinRecyclerViewFragment_to_addCoinFragment"
-            app:destination="@id/addCoinFragment" />
+            app:destination="@id/addCoinFragment"
+            app:enterAnim="@anim/dialog_enter"
+            app:exitAnim="@anim/dialog_exit"
+            app:popEnterAnim="@anim/dialog_enter"
+            app:popExitAnim="@anim/dialog_exit" />
     </fragment>
 </navigation>

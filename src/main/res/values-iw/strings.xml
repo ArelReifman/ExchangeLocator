@@ -15,14 +15,14 @@
     <string name="result">תוצאה</string>
     <string name="exchange_image_description">תמונת חלפן כספים</string>
     <string name="close">סגור</string>
-    <string name="hours">שעות:</string>
+    <string name="hours">שעות פתיחה:</string>
     <string name="address">כתובת:</string>
     <string name="city">עיר:</string>
     <string name="country">מדינה:</string>
-    <string name="exchange">חלפנות</string>
+    <string name="exchange">חנות המרת כספים</string>
     <string name="add_button">הוסף</string>
     <string name="tooltip_help_message">הזן את הסכום שברצונך להמיר</string>
-    <string name="exchange_location">מיקום חלפנות</string>
+    <string name="exchange_location">מיקום המרת כספים</string>
     <string name="do_you_want_to_open">האם אתה רוצה לפתוח מקומות להחלפת %s באזור שלך?</string>
     <string name="open">פתח</string>
     <string name="delete_coin">מחיקת מטבע</string>

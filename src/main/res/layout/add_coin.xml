@@ -139,13 +139,15 @@
                                     android:layout_height="wrap_content"
                                     android:hint="@string/user_input_amount"
                                     android:inputType="numberDecimal"
-                                    android:maxLength="8"
+                                    android:maxLength="7"
                                     android:padding="16dp"
                                     android:textAlignment="center"
                                     android:textColor="@color/converter_text_primary"
                                     android:textColorHint="@color/white"
                                     android:textSize="18sp"
-                                    android:textStyle="bold" />
+                                    android:textStyle="bold"
+                                    android:maxLines="2"
+                                    />
                             </com.google.android.material.card.MaterialCardView>
 
                             <ImageView
@@ -244,7 +246,13 @@
                                 android:padding="16dp"
                                 android:minHeight="56dp"
                                 android:gravity="center_vertical"
-                                android:background="@null" />
+                                android:background="@null"
+                                android:autoSizeTextType="uniform"
+                                android:autoSizeMinTextSize="12sp"
+                                android:autoSizeMaxTextSize="18sp"
+                                android:autoSizeStepGranularity="2sp"
+                                android:maxLines="1"
+                                android:ellipsize="end" />
                         </com.google.android.material.card.MaterialCardView>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>

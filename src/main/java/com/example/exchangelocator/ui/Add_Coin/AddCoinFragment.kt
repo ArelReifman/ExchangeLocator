@@ -3,11 +3,14 @@ import android.view.Gravity
 import androidx.core.content.ContextCompat
 import io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip
 import android.os.Bundle
+import android.text.TextUtils
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.core.widget.TextViewCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
@@ -35,6 +38,39 @@ class AddCoinFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        TextViewCompat.setAutoSizeTextTypeWithDefaults(
+            binding.outputConvert,
+            TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM
+        )
+
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(
+            binding.outputConvert,
+            12,
+            18,
+            2,
+            TypedValue.COMPLEX_UNIT_SP
+        )
+
+        binding.outputConvert.maxLines = 1
+        binding.outputConvert.ellipsize = TextUtils.TruncateAt.END
+
+
+        TextViewCompat.setAutoSizeTextTypeWithDefaults(
+            binding.userInputAmount,
+            TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM
+        )
+
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(
+            binding.userInputAmount,
+            12,
+            18,
+            2,
+            TypedValue.COMPLEX_UNIT_SP
+        )
+
+        binding.userInputAmount.maxLines = 1
+        binding.userInputAmount.ellipsize = TextUtils.TruncateAt.END
 
         viewModel = ViewModelProvider(requireActivity())[CoinViewModel::class.java]
 
@@ -76,12 +112,8 @@ class AddCoinFragment : Fragment() {
             val outputText = binding.outputConvert.text.toString().toDoubleOrNull()
 
             if (inputAmount != null && outputText != null) {
-
                 val newCoin = CoinDetail(fromCurrency, toCurrency, inputAmount, outputText)
-
-
                 viewModel.addCoin(newCoin)
-
                 Toast.makeText(requireContext(), getString(R.string.coin_saved_successfully), Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_addCoinFragment_to_coinRecyclerViewFragment)
             } else {
@@ -101,15 +133,12 @@ class AddCoinFragment : Fragment() {
         }
     }
 
-
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
 
     private fun showTooltip(anchorView: View) {
-
         val tooltipBuilder = SimpleTooltip.Builder(requireContext())
         tooltipBuilder.anchorView(anchorView)
         tooltipBuilder.text(getString(R.string.tooltip_help_message))

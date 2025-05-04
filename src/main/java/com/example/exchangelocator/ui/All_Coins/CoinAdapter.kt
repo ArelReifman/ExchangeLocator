@@ -34,13 +34,23 @@ class CoinAdapter : RecyclerView.Adapter<CoinAdapter.ViewHolder>() {
             "ILS" -> R.drawable.israel_flag
             "JPY" -> R.drawable.japan_flag
             "GBP" -> R.drawable.uk_flag
-            else -> R.drawable.world_image
+            else -> R.drawable.bg_globe_centered
         }
     }
 
     private fun formatAmount(amount: Double, currencyCode: String): String {
         val format = NumberFormat.getCurrencyInstance()
         format.currency = Currency.getInstance(currencyCode)
+
+
+        if (currencyCode == "JPY") {
+            format.maximumFractionDigits = 0
+            format.minimumFractionDigits = 0
+        } else {
+            format.maximumFractionDigits = 2
+            format.minimumFractionDigits = 2
+        }
+
         return format.format(amount)
     }
 
