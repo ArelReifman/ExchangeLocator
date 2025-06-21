@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.exchangelocator.databinding.DialogLayoutBinding
 import com.example.exchangelocator.models.ExchangePoint
 import com.example.exchangelocator.utils.TranslationHelper
+import com.example.exchangelocator.utils.getParcelableCompat
 
 class ExchangeDetailsFragment : Fragment() {
     private var _binding: DialogLayoutBinding? = null
@@ -40,12 +41,7 @@ class ExchangeDetailsFragment : Fragment() {
     }
 
     private fun getExchangePoint(): ExchangePoint? {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            arguments?.getParcelable("exchangePoint", ExchangePoint::class.java)
-        } else {
-            @Suppress("DEPRECATION")
-            arguments?.getParcelable("exchangePoint")
-        }
+        return arguments?.getParcelableCompat<ExchangePoint>("exchangePoint")
     }
 
     private fun getCountryString(country: String): String {
