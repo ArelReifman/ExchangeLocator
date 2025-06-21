@@ -41,7 +41,7 @@
     <string name="version_1_0_0" translatable="false">Version 1.0.0</string>
     <string name="about_exchangelocator" translatable="false">About ExchangeLocator</string>
 
-    <!-- Countries -->
+
     <string name="country_usa">USA</string>
     <string name="country_uk">UK</string>
     <string name="country_germany">Germany</string>
@@ -49,7 +49,7 @@
     <string name="country_japan">Japan</string>
     <string name="country_israel">Israel</string>
 
-    <!-- Cities -->
+
     <string name="city_new_york">New York</string>
     <string name="city_london">London</string>
     <string name="city_frankfurt">Frankfurt</string>
@@ -57,7 +57,7 @@
     <string name="city_tokyo">Tokyo</string>
     <string name="city_tel_aviv">Tel Aviv</string>
 
-    <!-- Addresses -->
+
     <string name="address_jfk_terminal_8">JFK International Airport, Terminal 8</string>
     <string name="address_jfk_terminal_4">JFK International Airport, Terminal 4</string>
     <string name="address_heathrow_terminal_5">Heathrow Airport, Terminal 5</string>
@@ -67,5 +67,8 @@
     <string name="address_narita_terminal_1">Narita International Airport, Terminal 1</string>
     <string name="address_haneda_terminal_3">Haneda Airport, Terminal 3</string>
     <string name="address_ben_gurion_terminal_3">Ben Gurion Airport, Terminal 3</string>
+
+    <string name="exchange_currency_format"> %1$s → %2$s</string>
+
 
 </resources>

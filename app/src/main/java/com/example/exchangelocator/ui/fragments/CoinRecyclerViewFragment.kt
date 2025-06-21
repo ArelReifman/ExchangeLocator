@@ -102,7 +102,7 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
             .setTitle(getString(R.string.exchange_location))
             .setMessage(getString(R.string.do_you_want_to_open, coin.toCurrency))
             .setPositiveButton(getString(R.string.open)) { _, _ ->
-                showExchangePointsList(coin.toCurrency)
+                showExchangePointsList(coin.toCurrency, coin)
             }
             .setNegativeButton(getString(R.string.close)) { dialogInterface, _ ->
                 coinAdapter.notifyItemChanged(position)
@@ -119,7 +119,7 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
         alertDialog.show()
     }
 
-    private fun showExchangePointsList(currencyCode: String) {
+    private fun showExchangePointsList(currencyCode: String, coin: CoinDetail) {
         val exchangePoints = viewModel.getExchangePointsByCurrency(currencyCode)
         if (exchangePoints.isNotEmpty()) {
             val exchangeNames = exchangePoints.map { it.name }.toTypedArray()
@@ -128,7 +128,7 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
                 .setTitle(getString(R.string.exchange_points_for, currencyCode))
                 .setItems(exchangeNames) { _, position ->
                     showExchangePointDetails(
-                        exchangePoints[position]
+                        exchangePoints[position], coin
                     )
                 }
                 .setNegativeButton(getString(R.string.close), null)
@@ -141,11 +141,12 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
         }
     }
 
-    private fun showExchangePointDetails(exchangePoint: ExchangePoint) {
+    private fun showExchangePointDetails(exchangePoint: ExchangePoint, coin: CoinDetail) {
         findNavController().navigate(
             R.id.action_coinRecyclerViewFragment_to_exchangeDetailsFragment,
             Bundle().apply {
                 putParcelable("exchangePoint", exchangePoint)
+                putParcelable("coin", coin)
             }
         )
     }

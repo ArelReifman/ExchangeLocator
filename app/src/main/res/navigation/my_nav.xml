@@ -16,7 +16,9 @@
             app:enterAnim="@anim/dialog_enter"
             app:exitAnim="@anim/dialog_exit"
             app:popEnterAnim="@anim/dialog_enter"
-            app:popExitAnim="@anim/dialog_exit" />
+            app:popExitAnim="@anim/dialog_exit"
+            app:popUpTo="@id/coinRecyclerViewFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/coinRecyclerViewFragment"
@@ -32,10 +34,14 @@
             app:popExitAnim="@anim/dialog_exit" />
         <action
             android:id="@+id/action_coinRecyclerViewFragment_to_exchangeDetailsFragment"
-            app:destination="@id/exchangeDetailsFragment" />
+            app:destination="@id/exchangeDetailsFragment"
+            app:popUpTo="@id/coinRecyclerViewFragment"
+            app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_coinRecyclerViewFragment_to_aboutUsFragment"
-            app:destination="@id/aboutUsFragment" />
+            app:destination="@id/aboutUsFragment"
+            app:popUpTo="@id/coinRecyclerViewFragment"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/exchangeDetailsFragment"

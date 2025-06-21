@@ -63,4 +63,5 @@
     <string name="address_narita_terminal_1">שדה תעופה בינלאומי נריטה, טרמינל 1</string>
     <string name="address_haneda_terminal_3">שדה תעופה האנדה, טרמינל 3</string>
     <string name="address_ben_gurion_terminal_3">שדה תעופה בן גוריון, טרמינל 3</string>
+    <string name="exchange_currency_format"> %2$s ← %1$s</string>
 </resources>

@@ -7,10 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import com.example.exchangelocator.R
 import com.example.exchangelocator.databinding.DialogLayoutBinding
 import com.example.exchangelocator.models.ExchangePoint
 import com.example.exchangelocator.utils.TranslationHelper
 import com.example.exchangelocator.utils.getParcelableCompat
+import com.example.exchangelocator.models.CoinDetail
 
 class ExchangeDetailsFragment : Fragment() {
     private var _binding: DialogLayoutBinding? = null
@@ -38,10 +40,17 @@ class ExchangeDetailsFragment : Fragment() {
         binding.valueCity.text = getCityString(exchangePoint.city)
         binding.valueAddress.text = getAddressString(exchangePoint.street)
         binding.valueHours.text = exchangePoint.openingHours
+        val coin = getCoin()
+        if (coin != null) {
+            binding.tvExchangeName.text = getString(R.string.exchange_currency_format, coin.fromCurrency, coin.toCurrency)
+        }
     }
 
     private fun getExchangePoint(): ExchangePoint? {
         return arguments?.getParcelableCompat<ExchangePoint>("exchangePoint")
+    }
+    private fun getCoin(): CoinDetail? {
+        return arguments?.getParcelableCompat<CoinDetail>("coin")
     }
 
     private fun getCountryString(country: String): String {
