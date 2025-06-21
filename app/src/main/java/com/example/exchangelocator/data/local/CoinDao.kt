@@ -13,6 +13,9 @@ interface CoinDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addCoin(coin: CoinDetail)
 
+    @androidx.room.Update
+    suspend fun updateCoin(coin: CoinDetail)
+
     @Delete
     suspend fun deleteCoin(coin: CoinDetail)
 

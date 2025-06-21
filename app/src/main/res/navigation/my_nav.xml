@@ -42,17 +42,62 @@
             app:destination="@id/aboutUsFragment"
             app:popUpTo="@id/coinRecyclerViewFragment"
             app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_coinRecyclerViewFragment_to_coinDetailViewFragment"
+            app:destination="@id/coinDetailViewFragment" />
     </fragment>
     <fragment
         android:id="@+id/exchangeDetailsFragment"
         android:name="com.example.exchangelocator.ui.fragments.ExchangeDetailsFragment"
         android:label="ExchangeDetailsFragment" >
         <argument
-            android:name="exchange"
+            android:name="exchangePoint"
             app:argType="com.example.exchangelocator.models.ExchangePoint" />
+        <argument
+            android:name="coin"
+            app:argType="com.example.exchangelocator.models.CoinDetail"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_exchangeDetailsFragment_self"
+            app:destination="@id/exchangeDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutUsFragment"
         android:name="com.example.exchangelocator.ui.fragments.AboutUsFragment"
         android:label="AboutUsFragment" />
+
+    <fragment
+        android:id="@+id/coinDetailViewFragment"
+        android:name="com.example.exchangelocator.ui.fragments.CoinDetailViewFragment"
+        android:label="fragment_coin_detail_view"
+        tools:layout="@layout/fragment_coin_detail_view">
+        <argument
+            android:name="coinDetail"
+            app:argType="com.example.exchangelocator.models.CoinDetail" />
+        <action
+            android:id="@+id/action_coinDetailViewFragment_to_coinDetailEditFragment"
+            app:destination="@id/coinDetailEditFragment" />
+        <action
+            android:id="@+id/action_coinDetailViewFragment_to_exchangeDetailsFragment"
+            app:destination="@id/exchangeDetailsFragment"
+            app:popUpTo="@id/coinDetailViewFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/coinDetailEditFragment"
+        android:name="com.example.exchangelocator.ui.fragments.CoinDetailEditFragment"
+        android:label="fragment_coin_detail_edit"
+        tools:layout="@layout/fragment_coin_detail_edit">
+        <argument
+            android:name="coinDetail"
+            app:argType="com.example.exchangelocator.models.CoinDetail" />
+        <action
+            android:id="@+id/action_coinDetailEditFragment_to_coinDetailViewFragment"
+            app:destination="@id/coinDetailViewFragment"
+            app:popUpTo="@id/coinDetailViewFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
 </navigation>

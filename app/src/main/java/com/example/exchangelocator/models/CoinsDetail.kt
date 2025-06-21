@@ -23,6 +23,10 @@ data class CoinDetail(
 
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0,
+
+    @ColumnInfo(name = "imageUri")
+    val imageUri: String? = null
+
 ) : Parcelable, java.io.Serializable
 
 

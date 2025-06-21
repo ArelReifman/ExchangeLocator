@@ -70,5 +70,24 @@
 
     <string name="exchange_currency_format"> %1$s → %2$s</string>
 
+    <!-- Exchange Point Names -->
+    <string name="ep_name_cxi_currency_exchange">CXI Currency Exchange</string>
+    <string name="ep_name_travelex">Travelex</string>
+    <string name="ep_name_travelex_germany">Travelex Germany</string>
+    <string name="ep_name_travelex_france">Travelex France</string>
+    <string name="ep_name_ice_currency_exchange">ICE Currency Exchange</string>
+    <string name="ep_name_gpa_currency_exchange">GPA Currency Exchange</string>
+    <string name="ep_name_mizuho_bank">Mizuho Bank</string>
+    <string name="ep_name_change_place">Change Place</string>
+    <string name="ep_name_global_exchange">Global Exchange</string>
+
+    <!-- Exchange Point Hours -->
+    <string name="ep_hours_0600_2300">06:00-23:00</string>
+    <string name="ep_hours_0600_2200">06:00-22:00</string>
+    <string name="ep_hours_0500_2300">05:00-23:00</string>
+    <string name="ep_hours_0730_2000">07:30-20:00</string>
+    <string name="ep_hours_0530_2230">05:30-22:30</string>
+    <string name="ep_hours_0630_2300">06:30-23:00</string>
+    <string name="ep_hours_24_7">24/7</string>
 
 </resources>

@@ -98,25 +98,9 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
     }
 
     override fun onCoinClick(coin: CoinDetail, position: Int) {
-        val dialogBuilder = AlertDialog.Builder(requireContext(), R.style.CustomAlertDialog)
-            .setTitle(getString(R.string.exchange_location))
-            .setMessage(getString(R.string.do_you_want_to_open, coin.toCurrency))
-            .setPositiveButton(getString(R.string.open)) { _, _ ->
-                showExchangePointsList(coin.toCurrency, coin)
-            }
-            .setNegativeButton(getString(R.string.close)) { dialogInterface, _ ->
-                coinAdapter.notifyItemChanged(position)
-                Toast.makeText(
-                    requireContext(),
-                    getString(R.string.action_canceled),
-                    Toast.LENGTH_SHORT
-                ).show()
-                dialogInterface.dismiss()
-            }
-            .setCancelable(false)
-
-        val alertDialog = dialogBuilder.create()
-        alertDialog.show()
+        // Navigate to CoinDetailViewFragment
+        val action = CoinRecyclerViewFragmentDirections.actionCoinRecyclerViewFragmentToCoinDetailViewFragment(coin)
+        findNavController().navigate(action)
     }
 
     private fun showExchangePointsList(currencyCode: String, coin: CoinDetail) {
@@ -142,13 +126,11 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
     }
 
     private fun showExchangePointDetails(exchangePoint: ExchangePoint, coin: CoinDetail) {
-        findNavController().navigate(
-            R.id.action_coinRecyclerViewFragment_to_exchangeDetailsFragment,
-            Bundle().apply {
-                putParcelable("exchangePoint", exchangePoint)
-                putParcelable("coin", coin)
-            }
+        val action = CoinRecyclerViewFragmentDirections.actionCoinRecyclerViewFragmentToExchangeDetailsFragment(
+            exchangePoint = exchangePoint,
+            coin = coin
         )
+        findNavController().navigate(action)
     }
 
     override fun onDestroyView() {
