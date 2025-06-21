@@ -36,4 +36,31 @@
     <string name="invalid_input">קלט לא תקין</string>
     <string name="coin_saved_successfully">המטבע נשמר בהצלחה</string>
     <string name="please_convert_before_saving">אנא בצע המרה לפני שמירה</string>
+
+
+    <string name="country_usa">ארה״ב</string>
+    <string name="country_uk">בריטניה</string>
+    <string name="country_germany">גרמניה</string>
+    <string name="country_france">צרפת</string>
+    <string name="country_japan">יפן</string>
+    <string name="country_israel">ישראל</string>
+
+
+    <string name="city_new_york">ניו יורק</string>
+    <string name="city_london">לונדון</string>
+    <string name="city_frankfurt">פרנקפורט</string>
+    <string name="city_paris">פריז</string>
+    <string name="city_tokyo">טוקיו</string>
+    <string name="city_tel_aviv">תל אביב</string>
+
+
+    <string name="address_jfk_terminal_8">JFK שדה תעופה בינלאומי, טרמינל 8</string>
+    <string name="address_jfk_terminal_4">JFK שדה תעופה בינלאומי, טרמינל 4</string>
+    <string name="address_heathrow_terminal_5">שדה תעופה היתרו, טרמינל 5</string>
+    <string name="address_heathrow_underground">תחנת רכבת תחתית בשדה תעופה היתרו לונדון</string>
+    <string name="address_frankfurt_terminal_1">שדה תעופה פרנקפורט, טרמינל 1</string>
+    <string name="address_charles_de_gaulle">שדה תעופה שארל דה גול, טרמינל 2E</string>
+    <string name="address_narita_terminal_1">שדה תעופה בינלאומי נריטה, טרמינל 1</string>
+    <string name="address_haneda_terminal_3">שדה תעופה האנדה, טרמינל 3</string>
+    <string name="address_ben_gurion_terminal_3">שדה תעופה בן גוריון, טרמינל 3</string>
 </resources>
