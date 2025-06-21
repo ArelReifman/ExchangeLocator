@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ExchangeLocator</string>
+    <string name="currency_converter">Currency Converter</string>
+    <string name="select_currency">Select your currency type</string>
+    <string name="enter_currency">Enter your currency</string>
+    <string name="select_converted_currency">Select converted currency type</string>
+    <string name="converted_currency">Your converted currency</string>
+    <string name="user_input_amount">Type</string>
+    <string name="convert">Convert</string>
+    <string name="save">Save</string>
+    <string name="swap_description">Swap currencies</string>
+    <string name="you_see_the_image_of_the_country">Currency flag image</string>
+    <string name="type_of_coin">Currency type</string>
+    <string name="result">Result</string>
+    <string name="exchange_image_description">Exchange office image</string>
+    <string name="close">Close</string>
+    <string name="hours">Hours:</string>
+    <string name="address">Address:</string>
+    <string name="city">City:</string>
+    <string name="country">Country:</string>
+    <string name="exchange">EXCHANGE</string>
+    <string name="add_button">Add</string>
+    <string name="tooltip_help_message">Enter the amount you want to convert</string>
+    <string name="exchange_location">Exchange Location</string>
+    <string name="do_you_want_to_open">Do you want to open %s exchange places in your area?</string>
+    <string name="open">Open</string>
+    <string name="delete_coin">Delete Coin</string>
+    <string name="are_you_sure_delete">Are you sure you want to delete %s?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="deleted">Deleted!</string>
+    <string name="action_canceled">Your action was canceled</string>
+    <string name="exchange_points_for">Exchange Points for %s</string>
+    <string name="no_exchange_points">No exchange points available for this currency</string>
+    <string name="invalid_input">Invalid input</string>
+    <string name="coin_saved_successfully">Coin saved successfully</string>
+    <string name="please_convert_before_saving">Please convert before saving</string>
+    <string name="exchangelocator_offers_a_specialized_solution_combining_real_time_currency_exchange_rate_monitoring_with_a_targeted_location_search_for_currency_exchange_services_the_application_enables_users_to_identify_and_compare_dedicated_currency_exchange_offices_in_their_vicinity_providing_critical_information_on_current_rates_and_available_currencies">ExchangeLocator offers a specialized solution combining real-time currency exchange rate monitoring with a targeted location search for currency exchange services. The application enables users to identify and compare dedicated currency exchange offices in their vicinity, providing critical information on current rates and available currencies..</string>
+    <string name="developed_by_narel_reifman_nronen_berger_nomer_trabulski">Developed by:\nArel Reifman\nRonen Berger\nOmer Trabulski</string>
+    <string name="version_1_0_0">Version 1.0.0</string>
+    <string name="about_exchangelocator">About ExchangeLocator</string>
+</resources>

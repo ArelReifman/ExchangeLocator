@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#625B71</color>
+    <color name="colorPrimary">#0288D1</color>
+    <color name="kind_of_blue">#076DA6</color>
+    <color name="blue">#0288D1</color>
+    <color name="kind_of_grey">#66ffffff</color>
+    <color name="screen_background">#F8F6F6</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="primary_accent">#4A90E2</color>
+    <color name="combination">#05B32A</color>
+    <color name="button_gray">#ECEFF1</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="converter_background_start">#0A1223</color>
+    <color name="converter_background_center">#020812</color>
+    <color name="converter_background_end">#290C37</color>
+    <color name="converter_card_outer">#252E3A</color>
+    <color name="converter_card_inner">#260E2F</color>
+    <color name="converter_input_field">#334155</color>
+    <color name="converter_text_primary">#E2E8F0</color>
+    <color name="converter_text_secondary">#CBD5E1</color>
+    <color name="converter_text_hint">#94A3B8</color>
+    <color name="converter_button_convert">#270B33</color>
+    <color name="converter_button_save">#270B33</color>
+    <color name="converter_icon_background">#475569</color>
+    <color name="arrow_color">#320E42</color>
+    <color name="background_fragment">#121213</color>
+</resources>

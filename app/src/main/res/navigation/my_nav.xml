@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/coinRecyclerViewFragment">
+
+    <fragment
+        android:id="@+id/addCoinFragment"
+        android:name="com.example.exchangelocator.ui.fragments.AddCoinFragment"
+        android:label="add_coin"
+        tools:layout="@layout/add_coin">
+        <action
+            android:id="@+id/action_addCoinFragment_to_coinRecyclerViewFragment"
+            app:destination="@id/coinRecyclerViewFragment"
+            app:enterAnim="@anim/dialog_enter"
+            app:exitAnim="@anim/dialog_exit"
+            app:popEnterAnim="@anim/dialog_enter"
+            app:popExitAnim="@anim/dialog_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/coinRecyclerViewFragment"
+        android:name="com.example.exchangelocator.ui.fragments.CoinRecyclerViewFragment"
+        android:label="recycler_view_coin"
+        tools:layout="@layout/recycler_view_coin">
+        <action
+            android:id="@+id/action_coinRecyclerViewFragment_to_addCoinFragment"
+            app:destination="@id/addCoinFragment"
+            app:enterAnim="@anim/dialog_enter"
+            app:exitAnim="@anim/dialog_exit"
+            app:popEnterAnim="@anim/dialog_enter"
+            app:popExitAnim="@anim/dialog_exit" />
+        <action
+            android:id="@+id/action_coinRecyclerViewFragment_to_exchangeDetailsFragment"
+            app:destination="@id/exchangeDetailsFragment" />
+        <action
+            android:id="@+id/action_coinRecyclerViewFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exchangeDetailsFragment"
+        android:name="com.example.exchangelocator.ui.fragments.ExchangeDetailsFragment"
+        android:label="ExchangeDetailsFragment" >
+        <argument
+            android:name="exchange"
+            app:argType="com.example.exchangelocator.models.ExchangePoint" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.example.exchangelocator.ui.fragments.AboutUsFragment"
+        android:label="AboutUsFragment" />
+</navigation>

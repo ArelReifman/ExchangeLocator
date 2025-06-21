@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ממיר מטבעות</string>
+    <string name="currency_converter">ממיר מטבעות</string>
+    <string name="select_currency">בחר את סוג המטבע שלך</string>
+    <string name="enter_currency">הזן את המטבע שלך</string>
+    <string name="select_converted_currency">בחר את סוג המטבע להמרה</string>
+    <string name="converted_currency">המטבע המומר שלך</string>
+    <string name="user_input_amount">הזן</string>
+    <string name="convert">המר</string>
+    <string name="save">שמור</string>
+    <string name="swap_description">החלף מטבעות</string>
+    <string name="you_see_the_image_of_the_country">דגל המטבע</string>
+    <string name="type_of_coin">סוג המטבע</string>
+    <string name="result">תוצאה</string>
+    <string name="exchange_image_description">תמונת חלפן כספים</string>
+    <string name="close">סגור</string>
+    <string name="hours">שעות פתיחה:</string>
+    <string name="address">כתובת:</string>
+    <string name="city">עיר:</string>
+    <string name="country">מדינה:</string>
+    <string name="exchange">חנות המרת כספים</string>
+    <string name="add_button">הוסף</string>
+    <string name="tooltip_help_message">הזן את הסכום שברצונך להמיר</string>
+    <string name="exchange_location">מיקום המרת כספים</string>
+    <string name="do_you_want_to_open">האם אתה רוצה לפתוח מקומות להחלפת %s באזור שלך?</string>
+    <string name="open">פתח</string>
+    <string name="delete_coin">מחיקת מטבע</string>
+    <string name="are_you_sure_delete">האם אתה בטוח שברצונך למחוק את %s?</string>
+    <string name="yes">כן</string>
+    <string name="no">לא</string>
+    <string name="deleted">נמחק!</string>
+    <string name="action_canceled">הפעולה שלך בוטלה</string>
+    <string name="exchange_points_for">נקודות החלפה עבור %s</string>
+    <string name="no_exchange_points">אין נקודות החלפה זמינות למטבע זה</string>
+    <string name="invalid_input">קלט לא תקין</string>
+    <string name="coin_saved_successfully">המטבע נשמר בהצלחה</string>
+    <string name="please_convert_before_saving">אנא בצע המרה לפני שמירה</string>
+</resources>
