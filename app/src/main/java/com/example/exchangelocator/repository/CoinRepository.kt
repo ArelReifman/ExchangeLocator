@@ -19,6 +19,8 @@ class CoinRepository(
 
     fun getAllCoinsLiveData() = coinDao.getAllCoins()
 
+    suspend fun updateCoin(coin: CoinDetail) = coinDao.updateCoin(coin)
+
     suspend fun deleteCoin(coin: CoinDetail) = coinDao.deleteCoin(coin)
 
     fun getExchangePointsByCurrency(

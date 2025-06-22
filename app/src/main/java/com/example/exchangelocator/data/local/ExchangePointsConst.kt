@@ -7,93 +7,93 @@ object ExchangePointsConst {
     val exchangePoints = listOf(
         ExchangePoint(
             1,
-            "CXI Currency Exchange",
-            "USA",
-            "New York",
-            "JFK International Airport,Terminal 8",
-            "06:00-23:00",
-            R.drawable.cxi_us
+            "name_cxi_currency_exchange",
+            "country_usa",
+            "city_new_york",
+            "address_jfk_terminal_8",
+            "hours_0600_2300",
+            R.drawable.cxi_us_fixed
         ),
         ExchangePoint(
             2,
-            "Travelex",
-            "USA",
-            "New York",
-            "JFK International Airport,Terminal 4",
-            "06:00-22:00",
+            "name_travelex",
+            "country_usa",
+            "city_new_york",
+            "address_jfk_terminal_4",
+            "hours_0600_2200",
             R.drawable.travelex_us
         ),
         ExchangePoint(
             3,
-            "Travelex",
-            "UK",
-            "London",
-            "Heathrow Airport,Terminal 5",
-            "05:00-23:00",
+            "name_travelex",
+            "country_uk",
+            "city_london",
+            "address_heathrow_terminal_5",
+            "hours_0500_2300",
             R.drawable.travelex_uk
         ),
         ExchangePoint(
             4,
-            "ICE Currency Exchange",
-            "UK",
-            "London",
-            "Heathrow Airport London Underground Station",
-            "07:30-20:00",
-            R.drawable.ice_uk
+            "name_ice_currency_exchange",
+            "country_uk",
+            "city_london",
+            "address_heathrow_underground",
+            "hours_0730_2000",
+            R.drawable.ice_uk_fixed
         ),
         ExchangePoint(
             5,
-            "Travelex Germany",
-            "Germany",
-            "Frankfurt",
-            "Frankfurt Airport,Terminal 1",
-            "06:00-22:00",
+            "name_travelex_germany",
+            "country_germany",
+            "city_frankfurt",
+            "address_frankfurt_terminal_1",
+            "hours_0600_2200",
             R.drawable.travelex_gr
         ),
         ExchangePoint(
             6,
-            "Travelex France",
-            "France",
-            "Paris",
-            "Charles de Gaulle Airport,Terminal 2E",
-            "05:30-22:30",
-            R.drawable.travelex_fr
+            "name_travelex_france",
+            "country_france",
+            "city_paris",
+            "address_charles_de_gaulle",
+            "hours_0530_2230",
+            R.drawable.travelex_fr_fixed
         ),
         ExchangePoint(
             7,
-            "GPA Currency Exchange",
-            "Japan",
-            "Tokyo",
-            "Narita International Airport,Terminal 1",
-            "06:30-23:00",
-            R.drawable.gpa_tokyo
+            "name_gpa_currency_exchange",
+            "country_japan",
+            "city_tokyo",
+            "address_narita_terminal_1",
+            "hours_0630_2300",
+            R.drawable.gpa_tokyo_fixed
         ),
         ExchangePoint(
             8,
-            "Mizuho Bank",
-            "Japan",
-            "Tokyo",
-            "Haneda Airport,Terminal 3",
-            "24/7",
-            R.drawable.mizuho_bank_tokyo
+            "name_mizuho_bank",
+            "country_japan",
+            "city_tokyo",
+            "address_haneda_terminal_3",
+            "hours_24_7",
+            R.drawable.mizuho_bank_tokyo_fixed
         ),
         ExchangePoint(
             9,
-            "Change Place",
-            "Israel",
-            "Tel Aviv",
-            "Ben Gurion Airport,Terminal 3",
-            "24/7",
-            R.drawable.bank_hapoalim_tlv
+            "name_change_place",
+            "country_israel",
+            "city_tel_aviv",
+            "address_ben_gurion_terminal_3",
+            "hours_24_7",
+            R.drawable.bank_hapoalim_tlv_fixed
         ),
         ExchangePoint(
             10,
-            "Global Exchange",
-            "Israel",
-            "Tel Aviv",
-            "Ben Gurion Airport,Terminal 3",
-            "24/7",
-            R.drawable.global_exchange_tlv
+            "name_global_exchange",
+            "country_israel",
+            "city_tel_aviv",
+            "address_ben_gurion_terminal_3",
+            "hours_24_7",
+            R.drawable.global_exchange_tlv_fixed
         )
     )
 }

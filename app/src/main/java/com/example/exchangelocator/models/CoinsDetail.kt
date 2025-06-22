@@ -22,9 +22,5 @@ data class CoinDetail(
     val resultAmount: Double,
 
     @PrimaryKey(autoGenerate = true)
-    var id: Int = 0,
+    var id: Int = 0
 ) : Parcelable, java.io.Serializable
-
-
-
-

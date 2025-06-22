@@ -142,13 +142,9 @@ class CoinRecyclerViewFragment : Fragment(), CoinAdapter.OnCoinItemClickListener
     }
 
     private fun showExchangePointDetails(exchangePoint: ExchangePoint, coin: CoinDetail) {
-        findNavController().navigate(
-            R.id.action_coinRecyclerViewFragment_to_exchangeDetailsFragment,
-            Bundle().apply {
-                putParcelable("exchangePoint", exchangePoint)
-                putParcelable("coin", coin)
-            }
-        )
+        val action = CoinRecyclerViewFragmentDirections
+            .actionCoinRecyclerViewFragmentToExchangeDetailsFragment(exchangePoint, coin)
+        findNavController().navigate(action)
     }
 
     override fun onDestroyView() {

@@ -41,7 +41,6 @@
     <string name="version_1_0_0" translatable="false">Version 1.0.0</string>
     <string name="about_exchangelocator" translatable="false">About ExchangeLocator</string>
 
-
     <string name="country_usa">USA</string>
     <string name="country_uk">UK</string>
     <string name="country_germany">Germany</string>
@@ -49,14 +48,12 @@
     <string name="country_japan">Japan</string>
     <string name="country_israel">Israel</string>
 
-
     <string name="city_new_york">New York</string>
     <string name="city_london">London</string>
     <string name="city_frankfurt">Frankfurt</string>
     <string name="city_paris">Paris</string>
     <string name="city_tokyo">Tokyo</string>
     <string name="city_tel_aviv">Tel Aviv</string>
-
 
     <string name="address_jfk_terminal_8">JFK International Airport, Terminal 8</string>
     <string name="address_jfk_terminal_4">JFK International Airport, Terminal 4</string>
@@ -70,5 +67,27 @@
 
     <string name="exchange_currency_format"> %1$s → %2$s</string>
 
+    <string name="name_cxi_currency_exchange">CXI Currency Exchange</string>
+    <string name="name_travelex">Travelex</string>
+    <string name="name_travelex_germany">Travelex Germany</string>
+    <string name="name_travelex_france">Travelex France</string>
+    <string name="name_ice_currency_exchange">ICE Currency Exchange</string>
+    <string name="name_gpa_currency_exchange">GPA Currency Exchange</string>
+    <string name="name_mizuho_bank">Mizuho Bank</string>
+    <string name="name_change_place">Change Place</string>
+    <string name="name_global_exchange">Global Exchange</string>
+
+    <string name="hours_0600_2300">06:00-23:00</string>
+    <string name="hours_0600_2200">06:00-22:00</string>
+    <string name="hours_0500_2300">05:00-23:00</string>
+    <string name="hours_0730_2000">07:30-20:00</string>
+    <string name="hours_0530_2230">05:30-22:30</string>
+    <string name="hours_0630_2300">06:30-23:00</string>
+    <string name="hours_24_7">24/7</string>
+    <string name="your_photo">Your Photo</string>
+    <string name="photo_selected">Photo selected!</string>
+    <string name="camera_feature_coming_soon">Camera feature will be added in next version</string>
+    <string name="exchange_gallery">Exchange Gallery</string>
+    <string name="gallery_coming_soon">Gallery feature coming soon!</string>
 
 </resources>

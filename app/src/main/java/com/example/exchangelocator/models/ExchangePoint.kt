@@ -12,4 +12,5 @@ data class ExchangePoint(
     val street: String,
     val openingHours: String,
     val imageResId: Int,
+    val customImagePath: String? = null
 ) : Parcelable

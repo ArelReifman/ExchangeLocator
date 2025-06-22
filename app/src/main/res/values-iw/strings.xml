@@ -37,7 +37,6 @@
     <string name="coin_saved_successfully">המטבע נשמר בהצלחה</string>
     <string name="please_convert_before_saving">אנא בצע המרה לפני שמירה</string>
 
-
     <string name="country_usa">ארה״ב</string>
     <string name="country_uk">בריטניה</string>
     <string name="country_germany">גרמניה</string>
@@ -45,14 +44,12 @@
     <string name="country_japan">יפן</string>
     <string name="country_israel">ישראל</string>
 
-
     <string name="city_new_york">ניו יורק</string>
     <string name="city_london">לונדון</string>
     <string name="city_frankfurt">פרנקפורט</string>
     <string name="city_paris">פריז</string>
     <string name="city_tokyo">טוקיו</string>
     <string name="city_tel_aviv">תל אביב</string>
-
 
     <string name="address_jfk_terminal_8">JFK שדה תעופה בינלאומי, טרמינל 8</string>
     <string name="address_jfk_terminal_4">JFK שדה תעופה בינלאומי, טרמינל 4</string>
@@ -64,4 +61,27 @@
     <string name="address_haneda_terminal_3">שדה תעופה האנדה, טרמינל 3</string>
     <string name="address_ben_gurion_terminal_3">שדה תעופה בן גוריון, טרמינל 3</string>
     <string name="exchange_currency_format"> %2$s ← %1$s</string>
+
+    <string name="name_cxi_currency_exchange">CXI המרת מטבעות</string>
+    <string name="name_travelex">טרוולקס</string>
+    <string name="name_travelex_germany">טרוולקס גרמניה</string>
+    <string name="name_travelex_france">טרוולקס צרפת</string>
+    <string name="name_ice_currency_exchange">ICE המרת מטבעות</string>
+    <string name="name_gpa_currency_exchange">GPA המרת מטבעות</string>
+    <string name="name_mizuho_bank">בנק מיזוהו</string>
+    <string name="name_change_place">ציינג פלייס</string>
+    <string name="name_global_exchange">גלובל אקסציינג</string>
+
+    <string name="hours_0600_2300">06:00-23:00</string>
+    <string name="hours_0600_2200">06:00-22:00</string>
+    <string name="hours_0500_2300">05:00-23:00</string>
+    <string name="hours_0730_2000">07:30-20:00</string>
+    <string name="hours_0530_2230">05:30-22:30</string>
+    <string name="hours_0630_2300">06:30-23:00</string>
+    <string name="hours_24_7">24/7</string>
+    <string name="your_photo">התמונה שלך</string>
+    <string name="photo_selected">תמונה נבחרה!</string>
+    <string name="camera_feature_coming_soon">פיצר מצלמה יתווסף בגרסה הבאה</string>
+    <string name="exchange_gallery">גלריית החנות</string>
+    <string name="gallery_coming_soon">גלריית החנות - בקרוב!</string>
 </resources>

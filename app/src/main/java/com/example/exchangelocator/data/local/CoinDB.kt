@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.exchangelocator.models.CoinDetail
 
-@Database(entities = [CoinDetail::class], version = 1, exportSchema = false)
+@Database(entities = [CoinDetail::class], version = 2, exportSchema = false)
 abstract class CoinDB : RoomDatabase() {
     abstract fun getCoinDao(): CoinDao
 
@@ -16,6 +16,7 @@ abstract class CoinDB : RoomDatabase() {
 
         fun getDatabase(context: Context) = instance ?: synchronized(this) {
             Room.databaseBuilder(context.applicationContext, CoinDB::class.java, "coin_db")
+                .fallbackToDestructiveMigration()
                 .build()
         }
     }
